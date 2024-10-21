@@ -11,9 +11,9 @@ async function startApp() {
   try {
     app.use(
       cors({
-        origin: "*",
+        origin: "http://localhost:5173", // Explicitly specify the frontend origin
         optionsSuccessStatus: 200,
-        credentials: true,
+        credentials: true, // Ensure credentials can be sent
       })
     );
     app.use(express.json());
